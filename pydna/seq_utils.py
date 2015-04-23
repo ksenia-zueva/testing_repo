@@ -26,7 +26,18 @@ def complement_codon(input_codon):
 
     return complemented_codon
 
-def is_codon_correct(input_codon):    
+def is_codon_correct(input_codon):
+    """Function to check if codon does not have wrong characters
+    
+    :param input_codon: it is expected to be a three base codon
+    :return: True or False
+    
+    >>> from pydna import seq_utils
+    >>> input_codon = 'ATC'
+    >>> seq_utils.is_codon_correct(input_codon)
+    True
+    """
+        
     allowed_characters = ['A','T','C','G','?','N','_']
     
     for base in input_codon:
